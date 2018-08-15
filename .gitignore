@@ -1,0 +1,10 @@
+.sass-cache/
+*.css.map
+
+*.DS_Store
+
+/.idea
+
+/api/vendor
+/api/cache
+/api/logs

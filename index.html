@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <title>BlueQ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Managing qualifications and compliance can be time consuming and painful, but BlueQ has a solution for organisations and individuals. Get started today!">
+    <meta name="author" content="BlueQ">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300"
+		  rel="stylesheet">
+    <link href="assets/images/ico/favicon.ico" rel="shortcut icon">
+    <link href="assets/images/ico/apple-touch-icon-144-precomposed.png"
+		  rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="assets/images/ico/apple-touch-icon-114-precomposed.png"
+		  rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="assets/images/ico/apple-touch-icon-72-precomposed.png"
+		  rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="assets/images/ico/apple-touch-icon-57-precomposed.png"
+		  rel="apple-touch-icon-precomposed">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js">
+	</script>
+    <script src="js/jquery-ui.min.js">
+    </script>
+    <!--[if lt IE 9]>
+    <script
+		src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js">
+	</script>
+    <![endif]-->
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+     ga('create', 'UA-66296584-1', 'auto');
+     ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="toplogin">
+          <a class="toploginbutton"
+             href="https://app.blueq.com.au/Account/Login">
+            Log In
+          </a>
+        </div>
+        <div id="overlaytop">
+            <img alt="logo" src="assets/images/logo.svg">
+            <div id="bigoverlaytop">
+                <p>BRINGING QUALIFICATIONS INTO THE 21st CENTURY</p>
+            </div>
+            <div id="smalloverlaytop">
+                <p>BRINGING QUALIFICATIONS</p>
+                <p> INTO THE 21st CENTURY</p>
+           </div>
+           <div id="tinyoverlaytop">
+               <p>BRINGING </p>
+               <p> QUALIFICATIONS</p>
+               <p> INTO THE 21st CENTURY</p>
+          </div>
+
+        </div>
+
+        <div class="makeSmall" id="indv">
+            <div id="mainindv">
+                <div id="indvhidepicture">
+					<img alt="individual"
+						 src= "assets/images/individual-display.png" />
+				</div>
+                <h1 class="smallTitle" id="indvtitle">FOR INDIVIDUALS</h1>
+                <div id="indvhide">
+                    <p>A single online</p>
+                    <p>account for all your</p>
+                    <p>qualifications</p>
+					<div class="buttonP">
+						<a class="findmorebutton" href="individuals.html">
+							FIND OUT MORE
+						</a>
+					</div>
+                </div>
+            </div>
+        </div>
+        <div class="makeBig focused" id="orgs">
+            <div id="mainorgs">
+                <div id="orgshidepicture">
+					<img alt="organisation"
+						 src="assets/images/organisation-display.png" />
+				</div>
+                <h1 id="orgstitle">FOR ORGANISATIONS</h1>
+                <div id="orgshide">
+                  <p>Manage and verify</p>
+                  <p>staff and volunteer</p>
+                  <p>qualifications online</p>
+					<div class="buttonP">
+						<a class="findmorebutton" href="organisations.html">
+							FIND OUT MORE
+						</a>
+					</div>
+                </div>
+            </div>
+        </div>
+        <div id="overlaybottom">
+            <p>Already a member?</p>
+			<a class="loginbutton"
+			   href="https://app.blueq.com.au/Account/Login">
+				Log In
+			</a>
+        </div>
+    </div>
+
+    <div class="mobile" id="mobilemain">
+        <!-- This is very rough code currently -->
+        <img alt="logo" src="assets/images/logo.svg" height="17" width="65" />
+        <p class="mobiletitle">Bringing qualifications into the 21st century</p>
+		<img alt="organisation"
+			 height="230"
+			 src="assets/images/organisation-display.png"
+			 width="280" />
+        <p>
+			<a class="organisationsbutton" href="organisations.html">
+				FOR ORGANISATIONS
+			</a>
+		</p>
+        <p>
+			<a class="individualsbutton" href="individuals.html">
+				FOR INDIVIDUALS
+			</a>
+		</p>
+        <p class="alreadymember">Already a member?</p>
+		<a class="loginbutton" href="https://app.blueq.com.au/Account/Login">
+			Log In
+		</a>
+    </div>
+    <script>
+		$(document).on('click', '.makeSmall, .smallTitle', function(event) {
+			event.preventDefault();
+
+			if (event.target != this) {
+				return;
+			}
+
+			$("#orgs, #indv").toggleClass("makeSmall makeBig focused");
+			$("#indvtitle, #orgstitle").toggleClass("smallTitle", 300, "slide");
+
+			if ($(this).attr('id').indexOf('indv') !== -1) {
+				$("#orgshide, #orgshidepicture").hide("fade", 50);
+				$("#indvhide, #indvhidepicture").delay(400).show("fade", 300);
+			} else {
+				$("#indvhide, #indvhidepicture").hide("fade", 50);
+				$("#orgshide, #orgshidepicture").delay(400).show("fade", 300);
+			}
+		});
+    </script>
+</body>
+</html>

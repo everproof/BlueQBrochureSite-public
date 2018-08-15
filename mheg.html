@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>BlueQ</title>
+    <!-- Fill out these meta tags with the correct information -->
+    <meta name="description" content="Manage all of your qualifications from a single, secure online account.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Put your favicon in the root directory! -->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel='stylesheet' href='assets/styles/main.css' />
+    <!-- The pure CSS gallery I borrowed from: http://benschwarz.github.io/gallery-css/ -->
+    <link rel='stylesheet' href='assets/styles/gallery.css' />
+    <link rel='stylesheet' href='assets/styles/gallery.theme.css' />
+    <!-- 'Flexbox Grid' imported using their CDN. Find them on github: https://github.com/kristoferjoseph/flexboxgrid -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" type="text/css" >
+    <!-- 'Roboto' imported using the Google Fonts API -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Google Analytics Script -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-66296584-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- Signup modal -->
+    <div id="signupModal" class="modal">
+      <div id="signupModalContent" class="modalContent center">
+        <img onclick="hideModal()" class="close" src="assets/images/close-icon.png" />
+        <h2>Let's Chat</h2>
+        <h4 id="modalSubtitle">Enter your details below and we'll get in touch with you shortly.</h4>
+        <form class="contactForm" method="post" action="/api/contact" id="contactForm">
+          <input type="hidden" name="formName" value="MHEG Contact Form" />
+          <label for="name">Name <span class="red">*</span></label>
+          <input class="required" id="name" type="text" placeholder="Jane Smith" name="contact_name" />
+          <label for="email">Email <span class="red">*</span></label>
+          <input class="required" id="email" type="text" placeholder="jane.smith@gmail.com" name="contact_email" />
+          <label for="organisation">Organisation <span class="red">*</span></label>
+          <input class="required" id="organisation" type="text" placeholder="Jane's Physiotherapy" name="contact_organisation" />
+          <label for="mobile">Mobile <span class="red">*</span></label>
+          <input class="required" id="mobile" type="text" placeholder="0400 000 000" name="contact_mobile" />
+          <label for="comments">Comments</label>
+          <textarea id="comments" placeholder="Comments (Optional)" name="contact_comments"></textarea>
+          <input type="hidden" name="buttonName"/>
+          <button id="submitButton" class="ctaButton" onclick="confirmModal()" type="submit" disabled>Send</a>
+        </form>
+      </div>
+    </div><!--Signup modal-->
+
+    <!--Video Modal-->
+    <div class="modal" id="videoModal" tabindex="-1">
+      <div class="modalContent center" id="videoModalContent">
+        <img onclick="hideVideoModal()" class="close" src="assets/images/close-icon.png" />
+          <div class="youtube-wrapper">
+              <div class="youtube-embed" id="player"></div>
+          </div>
+      </div>
+    </div><!--Video Modal-->
+
+    <!-- Nav bar -->
+    <div class="menu">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="menu-logo">
+      				<a href="/">
+      					<img class="logo" src="assets/images/blogo.svg" />
+      				</a>
+            </div>
+            <div class="nav-menu">
+              <ul>
+                <li><a href="https://app.blueq.com.au/Account/Login" class="loginButton">Log In</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--Nav Bar-->
+
+    <!--Main header-->
+    <div id="fullHeader" class="fullwidthSection fullBackground individualsBackground wrflHeader">
+      <img class="ribbon" src="assets/images/mheg-ribbon.png" />
+      <img id="mhegLogo" src="assets/images/mheg.png" />
+      <div class="container center header">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2 id="acpeth2">Digital Qualifications</h2>
+            <h1 class="threeLineBottomMargin">A verified, digital record of your lifelong learning.</h1>
+            <!-- <a class="ctaButton" target="_blank" href="https://app.blueq.com.au/Account/Register">Sign Up For Free</a> -->
+          </div>
+        </div>
+      </div>
+    </div><!--Main Header-->
+
+    <div class="fullWidthNoHeight smallPaddingBottom borderBottom">
+      <div class="wideContainer">
+        <h2 class="center">WHAT IS BLUEQ?</h2>
+        <div class="row middle-xs">
+          <div class="col-xs-12">
+            <p class="center">
+            The Mental Health Education Group is using BlueQ to issue a digital, verified qualification to students who complete the Mental Health First Aid course.<br>
+            At the completion of the course, all MHEG students will be given access to a free BlueQ Personal Account containing their MHFA qualification.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Div with icons and video-->
+    <div class="fullwidthSection borderBottom">
+      <div class="container">
+        <h2 class="center paddedTop">USE BLUEQ TO MAKE YOUR LIFE EASIER</h2>
+        <div class="row middle-xs">
+          <div class="col-xs-12 col-sm-7">
+            <ul class="featuresList">
+              <li>
+                <div class="left-half"><img class="icon" src="assets/images/icons/briefcase.png" /></div>
+                <div class="right-half">
+                  <p class="featureTitle">Store All In One</p>
+                  <p>Make BlueQ a complete online record of your lifelong learning by storing all your qualifications in one secure account</p>
+                </div>
+              </li>
+              <li>
+                <div class="left-half"><img class="icon" src="assets/images/icons/globe.png" /></div>
+                <div class="right-half">
+                  <p class="featureTitle">Share</p>
+                  <p>Share your verified qualifications with current or prospective employers at the click of a button</p>
+                  </div>
+              </li>
+              <li>
+                <div class="left-half"><img class="icon" src="assets/images/icons/flag.png" /></div>
+                <div class="right-half">
+                <p class="featureTitle">Manage Renewals</p>
+                <p>Receive notifications when qualifications are expiring and renew them ahead of time</p>
+                </div>
+              </li>
+              <li>
+                <div class="left-half"><img class="icon" src="assets/images/icons/check.png" /></div>
+                <div class="right-half">
+                <p class="featureTitle">Access on Demand</p>
+                <p>Access qualifications anywhere, anytime, on any device with BlueQ’s responsive design</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-5 videoContainer">
+            <div class="videoContainer center">
+              <img class="fullImage" src="images/imac5.png" />
+              <img class="playButton" onclick="showVideoModal()" src="assets/images/play-button.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--Div with icons and video-->
+
+    <!-- Div with image on right -->
+    <div class="fullwidthSection borderBottom noPaddingBottom">
+      <div class="container">
+        <div class="row middle-xs">
+          <div class="col-xs-12 col-sm-6 left">
+            <h2>Stand out with employers</h2>
+            <p>BlueQ users stand out by providing digital and verified records of their qualifications and training to current and prospective employers.</p>
+            <!-- <a id="readMore" target="_blank" class="ctaButton" href="https://app.blueq.com.au/Account/Register">Sign Up For Free</a> -->
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+              <img class="fullImageBottom" src="assets/images/magnify.png" />
+          </div>
+        </div>
+      </div>
+    </div><!-- Div with image on right -->
+
+    <!-- Div with image on left -->
+    <div class="fullwidthSection borderBottom noPaddingBottom">
+      <div class="container">
+        <div class="row middle-xs center-xs">
+          <div class="col-xs-6 col-sm-4 first-sm last-xs">
+            <img class="fullImageBottom" src="assets/images/mheg-mobile.png" />
+          </div>
+          <div class="col-xs-12 col-xs-offset-0 col-sm-offset-2 col-sm-6 right">
+            <h2>Your time is valuable</h2>
+            <p>Stop wasting time looking for lost or misplaced qualifications records, or making photocopies and sending scanned images via email.</p>
+            <p>BlueQ digitises this information and makes your life easier.</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- Div with image on left -->
+
+    <div class="fullWidthNoHeight borderBottom paddedTop">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <h2>Any Questions?</h2>
+            <a class="ctaButton" data-button-name="Contact Us" name="modalButton">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <a href="about.html" target="_blank">About Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="/blog" target="_blank">Blog</a>
+              </div>
+
+              <div class="col-sm-12 text-center">
+                <a href="terms.html" target="_blank">Terms</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="privacy.html" target="_blank">Privacy Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="faq.html" target="_blank">FAQ</a>
+              </div>
+              <div class="col-sm-12 text-center">
+                <a href="https://www.facebook.com/blueq/">Facebook</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="https://www.linkedin.com/company/blueq">LinkedIn</a>
+              </div>
+              <div class="col-sm-12 text-center">
+                <p>1/143 Cecil Street, South Melbourne VIC 3205</p>
+              </div>
+              <div class="col-sm-12 text-center">
+                <p>© 2017 Clasity Pty Ltd</p>
+              </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <!-- Modal, Video and Tawk Scripts -->
+    <script>
+      var form = $('#contactForm');
+
+      //CONTACT FORM MODALS//
+      //Show contact form//
+      function showModal() {
+        $("body").addClass("no-scroll");
+        $('#signupModal').show()
+        window.setTimeout(function () {
+          $('#signupModalContent').addClass('showing');
+        }, 100);
+      }
+
+      //Show confirmation message after submitting form//
+      function confirmModal() {
+        $('#signupModal h2').html('Thank you');
+        $('#modalSubtitle').html('We will get in touch with you shortly.');
+        $('input, label, textarea').hide();
+        $("#submitButton").attr("onclick","hideModalRemoveSubmit()").html('Close');
+      }
+
+      //Hide confirmation message and remove submit type//
+      function hideModalRemoveSubmit() {
+        hideModal();
+        $("#contactForm").attr('action','');
+      }
+
+      //Hide modal from 'X' button//
+      function hideModal() {
+        $("body").removeClass("no-scroll");
+        $('#signupModal').hide();
+        $('#signupModalContent').removeClass('showing');
+      }
+
+      //Disable submit button until all fields have input //
+      (function() {
+      $('form > input.required').on('change keyup', function() {
+          var empty = false;
+          $('form > input.required').each(function() {
+            if ($(this).val() == '') {
+                empty = true;
+            }
+          });
+          if (empty) {
+              $('#submitButton').attr('disabled', true);
+          } else {
+              $('#submitButton').removeAttr('disabled');
+          }
+      });
+      })()
+
+      //
+
+      $('a[name="modalButton"]').on('click', function(e) {
+        $('input[name="buttonName"]').val($(this).data("button-name"));
+        showModal();
+      });
+
+      //Use ajax to send contact form on submit//
+
+      form.submit(function(event){
+        event.preventDefault();
+        $.ajax({
+          dataType: 'html',
+          type: 'POST',
+          data: form.serialize(),
+          url: $(this).attr('action')
+        });
+      });
+
+      //VIDEO MODALS//
+      //Show video modal//
+      function showVideoModal() {
+        $('#videoModal').show();
+        window.setTimeout(function () {
+          $('#videoModalContent').addClass('showing');
+        }, 100);
+      }
+
+      //Hide Video Modal//
+      function hideVideoModal() {
+        $('#videoModal').hide();
+        $('#videoModalContent').removeClass('showing');
+        pauseVideo();
+      }
+
+      //YOUTUBE SCRIPT//
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api/";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '720',
+          width: '1280',
+          videoId: 'WBwg6nWVuM0'
+        });
+      }
+
+      // Pause video //
+      function pauseVideo() {
+        player.pauseVideo();
+      }
+
+      //TAWK.TO SCRIPT//
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/56ae94a65cc0c7a6483eb59e/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+
+    </script>
+  </body>
+</html>

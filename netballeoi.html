@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <title>BlueQ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Managing qualifications and compliance can be time consuming and painful, but BlueQ has a solution for organisations and individuals. Get started today!">
+    <meta name="author" content="BlueQ">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300"
+		  rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="css/container.css" rel="stylesheet">
+    <link href="assets/images/ico/favicon.ico" rel="shortcut icon">
+    <link href="assets/images/ico/apple-touch-icon-144-precomposed.png"
+		  rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="assets/images/ico/apple-touch-icon-114-precomposed.png"
+		  rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="assets/images/ico/apple-touch-icon-72-precomposed.png"
+		  rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="assets/images/ico/apple-touch-icon-57-precomposed.png"
+		  rel="apple-touch-icon-precomposed">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" type="text/css" >
+    <script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js">
+	</script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js">
+    </script>
+    <!--[if lt IE 9]>
+    <script
+		src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js">
+	</script>
+    <![endif]-->
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+     ga('create', 'UA-66296584-1', 'auto');
+     ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+<div class="above-container">
+</div>
+
+<div class="overall-container">
+    <div class="white-content">
+        <div class="header-image football">
+          <div class="centeredcontent center">
+              <a href="/" target="_blank"><img src="assets/images/logo.svg" height="60px" width="195px" style="margin-top:90px"></a>
+              <p><h2>Expression of Interest</h2></p>
+          </div>
+        </div>
+
+  <div class="white-content borderBottom">
+    <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 center">
+      <p class="center">
+        <br>
+        We have capacity to help 10 netball associations comply with the Child Safe Standards before the 1 January 2017 deadline. Complete the form below and we will be in touch to discuss your association's requirements.
+      </div>
+    </div>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+    <div class="panel panel-default userform center">
+      <div class="panel-body">
+        <div id="formempty">
+          <form class="contactForm" method="post" action="/api/contact" id="contactForm">
+            <input type="hidden" name="formName" value="Netball Expression of Interest Form" />
+            <div class="form-group">
+              <input type="text" class="required form-control" id="inputName" placeholder="Name *" name="contact_name" required />
+            </div>
+            <div class="form-group">
+              <input type="text" class="required form-control" id="inputLeague" placeholder="Association *" name="contact_league" required />
+            </div>
+            <div class="form-group">
+              <input type="text" class="required form-control" id="inputPhone" placeholder="Phone Number *" name="contact_phone" required />
+            </div>
+            <div class="form-group">
+              <input type="number" class="required form-control" id="inputTeams" placeholder="Approx. Number of Teams *" name="contact_teams" required />
+            </div>
+            <div class="form-group">
+              <textarea id="message" class="form-control" placeholder="Message (optional)" name="contact_message"></textarea>
+            </div>
+            <button id="submitButton" class="btn btn-primary" type="submit" onclick="confirmModal()" disabled> Register Your Interest </button>
+          </form>
+        </div>
+
+        <div id="formcomplete">
+          <h2> Thanks! </h2>
+          <h4> We will be in touch shortly. </h4>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <div class="darkBackground">
+          <div class="container center">
+            <div class="row">
+              <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                  <img class="testimonialHeadshot" src="assets/images/jake-mccauley.png">
+                  <h3>Jake McCauley</h3>
+                  <p class="blue">General Manager - South Metro Football League</p>
+                  <h4 class="testimonial">"BlueQ is a simple and affordable solution that I can see being incredibly useful across all codes of sport. I hope that BlueQ becomes the industry standard for qualification and accreditation management nationally, to help increase the compliance levels in sport."</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+<script>
+$(document).ready(function () {
+			  $(".navbar-toggle").on("click", function () {
+				    $(this).toggleClass("active");
+			  });
+		});
+
+    //Use ajax to send contact form on submit//
+
+    var form = $('#contactForm');
+    form.submit(function(event){
+      event.preventDefault();
+      $.ajax({
+        dataType: 'html',
+        type: 'POST',
+        data: form.serialize(),
+        url: $(this).attr('action')
+      });
+      console.log("Data sent to ajax");
+    });
+
+    function confirmModal() {
+      $('#formempty').hide();
+      $('#formcomplete').show();
+      }
+
+
+      $('input').keyup(function() {
+    if($('#inputName').val() != "" && $('#inputLeague').val() != "" && $('#inputPhone').val() != "" && $('#inputTeams').val() != "") {
+       $('#submitButton').removeAttr('disabled');
+    } else {
+       $('#submitButton').attr('disabled', true);
+    }
+});
+
+</script>
+</body>
+
+</html>

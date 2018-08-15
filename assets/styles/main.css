@@ -1,0 +1,962 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+.twotone{
+  background: #f8f8f8;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+body {
+    -webkit-overflow-scrolling : touch !important;
+    /*overflow: auto !important;*/
+    /*height: 100% !important;*/
+}
+
+/* TYPE
+-------------------------------------------------------------------------------- */
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 35px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    margin: 0 0 60px 0;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: #63B7EA;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0 0 30px 0;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #333333;
+    margin: 0 0 20px 0;
+}
+
+    h4.testimonial {
+        color: #FFFFFF;
+        margin: 0 0 20px 0;
+    }
+
+    h4.subtitle {
+      color: #FFFFFF;
+    }
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #666666;
+    line-height: 32px;
+    margin: 0 0 30px 0;
+}
+
+    p.blue {
+        color: #63B7EA;
+    }
+
+    p.small {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    p.caption {
+        font-size: 14px;
+        text-align: center;
+    }
+
+a {
+    text-decoration: none;
+}
+
+#acpeth2 {
+    font-weight: 400;
+}
+
+.industryTile span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #63B7EA;
+}
+
+/* BUTTONS
+-------------------------------------------------------------------------------- */
+.ctaButton {
+    cursor: pointer;
+    display: inline-block;
+    margin: 20px;
+    padding: 12px 20px 10px 20px;
+    min-width: 170px;
+    background: #63B7EA;
+    border-bottom: solid 2px #2B87BF;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background 0.5s;
+}
+
+    .ctaButton:disabled {
+        cursor: no-drop;
+        background: #CCCCCC;
+        border-bottom: solid 2px #666666;
+        transition: background 0.5s;
+    }
+
+    .ctaButton#readMore {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .ctaButton:hover {
+        background: #2B87BF;
+    }
+
+        .ctaButton:hover:disabled {
+            background: #CCCCCC;
+        }
+
+.signupButton {
+    background: #63B7EA;
+    color: #FFF;
+    margin: 13px 0 13px 0;
+    border: 1px solid #63B7EA;
+    border-radius: 3px;
+}
+
+.loginButton {
+    margin: 13px 0 13px 0;
+    border: 1px solid #63B7EA;
+    border-radius: 3px;
+}
+
+.forLanderButton {
+}
+
+.industryTile {
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    display: block;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    margin: 0 20px 0 20px;
+}
+
+#tileIcon {
+    display: inline-block;
+    height: 70px;
+    margin: 20px auto 10px auto;
+}
+
+#industryTiles {
+    padding: 40px 0 40px 0;
+}
+
+#tileNext {
+    height: 14px;
+}
+
+.tileHeading {
+    transform: translateX(4px);
+    padding-bottom: 20px;
+}
+
+/* The fast way */
+
+/* Pre-render the bigger shadow, but hide it */
+.industryTile::after {
+    background-color: red;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Transition to showing the bigger shadow on hover */
+.industryTile:hover::after {
+    opacity: 1;
+}
+
+/* DIVS
+-------------------------------------------------------------------------------- */
+.center {
+    text-align: center;
+}
+
+.container {
+    width: calc(100% - 30px);
+    max-width: 960px; /* Change this if you have a preferred container width eg. 1138 */
+    padding: 0 15px 0 15px;
+    margin: 0 auto;
+}
+
+.wideContainer {
+    width: calc(100% - 30px);
+    max-width: 1000px; /* Change this if you have a preferred container width eg. 1138 */
+    padding: 0 15px 0 15px;
+    margin: 0 auto;
+}
+
+.fullWidthNoHeight {
+    position: relative;
+    width: 100%;
+    padding: 0 0 80px 0;
+}
+
+.borderBottom {
+    border-bottom: solid 1px #e1e1e1;
+}
+
+.fullwidthSection {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    padding: 0 0 80px 0;
+}
+
+    .fullwidthSection.fullBackground {
+        padding: 10px 0 0 0;
+        margin-bottom: 10px;
+    }
+
+    .fullwidthSection.darkBackground {
+        background: #1F323B;
+        padding-top: 80px;
+    }
+
+    .fullwidthSection.noPaddingBottom {
+        padding: 80px 0 0 0;
+    }
+
+.fullWidthNoHeight.paddedTop {
+    padding: 80px 0 80px 0;
+}
+
+.fullwidthSection.paddedTop {
+    padding: 80px 0 80px 0;
+}
+
+.noMarginBottom {
+    margin-bottom: 0;
+}
+
+.smallPaddingBottom {
+  padding-bottom: 40px;
+}
+
+.fullWidthTitleSmallMargin {
+    margin-top: 50px;
+}
+
+.fullwidthSection.borderBottom {
+    border-bottom: solid 1px #e1e1e1;
+}
+
+    .fullwidthSection.borderBottom p {
+        margin: 1em 0;
+    }
+
+.fullWidthTitle {
+    margin-top: 80px;
+}
+
+.fullBackground {
+    background: url(../images/netball-ring-2.png) no-repeat center center;
+    background-size: cover;
+}
+
+.yjflBackground {
+    background: url(../images/football-line.png) no-repeat center center;
+    background-size: cover;
+}
+
+.vcclBackground {
+    background: url(../images/cricketball.png) no-repeat center center;
+    background-size: cover;
+}
+
+.gymnasticsvicBackground {
+    background: url(../images/gymnasticsvic-header1.png) no-repeat center center;
+    background-size: cover;
+}
+
+.disabilityBackground {
+    background: url(../images/training.png) no-repeat center center;
+    background-size: cover;
+}
+
+.squashBackground {
+    background: url(../images/squashbackground2.png) no-repeat center center;
+    background-size: cover;
+}
+
+.trainingBackground {
+    background: url(../images/training.png) no-repeat center center;
+    background-size: cover;
+}
+
+.individualsBackground {
+    background: url(../images/individuals-header3.png) no-repeat center center;
+    background-size: cover;
+}
+
+.hospitalityBackground {
+    background: url(../images/hospitality-header1.png) no-repeat center center;
+    background-size: cover;
+}
+
+.campingBackground {
+    background: url(../images/camping-1.png) no-repeat center center;
+    background-size: cover;
+}
+
+.orgBackground {
+    background: url(../images/training.png) no-repeat center center;
+    background-size: cover;
+}
+
+.wwccBackground {
+    background: url(../images/wwcc-header2.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.header {
+    margin: 80px 0 80px 0;
+}
+
+#noBottomMargin.header {
+    margin: 80px 0 0px 0;
+}
+
+.left {
+    text-align: left;
+}
+
+.menu {
+    background: #ffffff;
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+}
+
+    .menu .menu-logo {
+        display: inline-block;
+        padding: 14px 0 14px 0;
+    }
+
+    .menu .nav-menu {
+        display: inline-block;
+        float: right;
+    }
+
+        .menu .nav-menu ul {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+            .menu .nav-menu ul li {
+                display: inline;
+            }
+
+                .menu .nav-menu ul li a {
+                    display: inline-block;
+                    padding: 10px 15px 10px 15px;
+                    color: #333333;
+                    text-decoration: none;
+                    transition: color 0.5s;
+                }
+
+                    .menu .nav-menu ul li a.signupButton {
+                        color: #FFFFFF;
+                        transition: background-color 0.5s;
+                    }
+
+                    .menu .nav-menu ul li a.loginButton {
+                        color: #63B7EA;
+                        transition: background-color 0.5s;
+                        transition: color 0.3s;
+                    }
+
+                    .menu .nav-menu ul li a:hover {
+                        color: #63B7EA;
+                    }
+
+                    .menu .nav-menu ul li a.signupButton:hover {
+                        color: #FFF;
+                        background-color: #36a2e4;
+                        transition: color 0.3s;
+                        transition: background-color 0.5s;
+                    }
+
+                    .menu .nav-menu ul li a.loginButton:hover {
+                        color: #FFFFFF;
+                        background-color: #36a2e4;
+                        transition: background-color 0.5s;
+                        transition: color 0.3s;
+                    }
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.modalContent {
+    position: relative;
+    margin: 120px auto 0 auto;
+    width: calc(100% - 90px);
+    max-width: 400px;
+    padding: 30px;
+    background: #FFFFFF;
+    opacity: 0;
+    transition: all 1s;
+}
+
+#videoModalContent {
+    max-width: 720px;
+}
+
+.modalContent.showing {
+    margin: 80px auto 80px auto;
+    opacity: 1;
+}
+
+.modalContent .close {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+}
+
+.modalContent label {
+    text-align: left;
+    display: block;
+    color: #666666;
+}
+
+.modalContent input, textarea {
+    display: block;
+    margin: 7px 0 15px 0;
+    width: calc(100% - 10px);
+    max-width: calc(100% - 10px);
+    padding: 6px 5px 6px 5px;
+    border: solid 1px #CCCCCC;
+    border-radius: 3px;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #444444;
+}
+
+.headerFormContent {
+    position: relative;
+    margin: 0 auto 0 auto;
+    max-width: 400px;
+    padding: 30px;
+}
+
+    .headerFormContent label {
+        text-align: left;
+        display: block;
+        color: #666666;
+    }
+
+    .headerFormContent input {
+        display: block;
+        margin: 7px 0 25px 0;
+        width: calc(100% - 10px);
+        padding: 6px 5px 6px 5px;
+        border: solid 1px #CCCCCC;
+        border-radius: 3px;
+        outline: none;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        color: #444444;
+    }
+
+    .headerFormContent h4 h2 {
+        text-align: left;
+    }
+
+    .headerFormContent .ctaButton {
+        margin-left: 0;
+    }
+
+.paddedTop {
+    padding-top: 60px;
+}
+
+.right {
+    text-align: right;
+}
+
+.videoContainer {
+    position: relative;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.threeLineBottomMargin {
+    margin: 0 0 30px 0;
+}
+
+#partners {
+    padding: 0 0 30px 0;
+}
+
+.wrflHeader {
+  min-height: 320px;
+}
+
+.organisationTypes{
+  text-align: center;
+  font-weight: bold;
+  color: grey;
+}
+
+.whiteSection{
+  background:white;
+}
+
+/* IMAGES
+-------------------------------------------------------------------------------- */
+.icon {
+    display: inline-block;
+    width: 62px;
+    padding: 10px;
+}
+
+.logo {
+    width: 130px;
+}
+
+.fullImage {
+    width: 100%;
+}
+
+.fullImageBottom {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.playButton {
+    cursor: pointer;
+    margin: auto;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 25%;
+    transition: transform 0.5s;
+}
+
+    .playButton:hover {
+        transform: scale(1.2);
+    }
+
+.ribbon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 230px;
+}
+
+.specificLogo {
+    display: inline-block;
+    margin: 40px auto 20px auto;
+    width: 100px;
+}
+
+.testimonialHeadshot {
+    width: 150px;
+    border-radius: 150px;
+    border: solid 3px #FFFFFF;
+    margin-bottom: 5px;
+}
+
+.videoContainer .fullImage {
+    position: relative;
+    top: 60px;
+    /*transform: translateY(30%);*/
+}
+
+#partners img {
+    width: 100%;
+}
+
+img.grayscale {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+, IE10 */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+    -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+}
+
+img.grayscale:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+
+#gymnasticsvicLogo {
+  width: 220px;
+}
+
+/* LISTS
+-------------------------------------------------------------------------------- */
+
+.featuresList {
+    display: block;
+    margin: 5% 20% 0 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    .featuresList li {
+        display: block;
+        list-style-type: none;
+        vertical-align: top;
+        margin: 0 0 10px 0;
+    }
+
+        .featuresList li .left-half {
+            display: inline-block;
+            width: 84px;
+        }
+
+        .featuresList li .right-half {
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 0 10px 0;
+            width: calc(100% - 100px);
+            color: #666666;
+        }
+
+            .featuresList li .right-half .featureTitle {
+                padding-top: 0;
+                margin: 10px 0 0 0;
+                font-size: 18px;
+            }
+
+            .featuresList li .right-half p {
+                font-size: 16px;
+                margin: 5px 0 0 0;
+                line-height: normal;
+            }
+
+/* FOOTER
+-------------------------------------------------------------------------------- */
+
+#footer {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    color: #fff;
+    background: #2e2e2e;
+}
+
+    #footer a {
+        color: #fff;
+        font-size: 0.8em;
+        font-weight: bold;
+    }
+
+        #footer a:hover {
+            color: #63B7EA;
+        }
+
+    #footer p {
+        color: #fff;
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+
+    #footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 -7.5px;
+    }
+
+        #footer ul > li {
+            display: inline-block;
+            margin: 0 7.5px;
+        }
+
+@media only screen and (min-width: 768px) {
+    #footer .social-icons {
+        float: right;
+    }
+}
+
+/* MEDIA QUERIES
+-------------------------------------------------------------------------------- */
+
+@media screen and (max-width:425px) {
+  .forLanderButton{
+    font-size: 15px !important;
+    padding: 10px 2px 10px 2px !important;
+  }
+  .logo{
+  width: 100px;
+  height: 30px;
+  }
+
+}
+
+@media screen and (min-width:450px) {
+  #gymnasticsvicLogo {
+    position: relative;
+    left: 20px;
+  }
+}
+
+@media screen and (max-width:767px) {
+    .right {
+        text-align: center;
+    }
+
+    .left {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .playButton {
+        bottom: 50px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .playButton {
+        bottom: 40px;
+    }
+
+    .featuresList {
+        margin-right: 0;
+    }
+
+        .featuresList li .right-half {
+            padding-bottom: 5px;
+        }
+}
+
+@media screen and (max-width:767px) {
+    .playButton {
+        bottom: 18%;
+        width: 20%;
+        max-width: 100px;
+    }
+
+    .videoContainer img.fullImage{
+        max-width: 400px;
+    }
+
+    .fullwidthSection {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 544px) {
+    .col-sm-12 {
+        float: left;
+    }
+}
+
+.col-sm-12 {
+    width: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-right: .9375rem;
+    padding-left: .9375rem;
+}
+
+.youtube-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+
+.youtube-embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+@media screen and (max-width: 885px) {
+    .ribbon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 150px;
+    }
+
+    #campLogo, #trainingLogo, #wrflLogo, #mhegLogo, #nfllogo, #dcfnalogo {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 886px) {
+    #campLogo {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        width: 130px;
+    }
+
+    #trainingLogo {
+        position: absolute;
+        top: -55px;
+        left: 25px;
+        width: 120px;
+    }
+
+    #wrflLogo {
+      position: absolute;
+      top: -60px;
+      left: 25px;
+      width: 70px;
+    }
+
+    #nfllogo{
+      position: absolute;
+      top: -68px;
+      left: 25px;
+      width: 70px;
+    }
+
+    #dcfnalogo{
+      position: absolute;
+      top: -70px;
+      left: 25px;
+      width: 70px;
+      height: 70px;
+    }
+
+    #mhegLogo {
+      position: absolute;
+      top: -55px;
+      left: 25px;
+      width: 110px;
+    }
+}
+
+@media screen and (max-width: 1270px) {
+    #trainingLogo {
+        position: absolute;
+        top: -55px;
+        left: 50%;
+        right: 50%;
+        margin-left: -60px;
+        width: 120px;
+    }
+
+    #wrflLogo {
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      right: 50%;
+      margin-left: -60px;
+      width: 70px;
+    }
+
+    #nflLogo {
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      right: 50%;
+      margin-left: -60px;
+      width: 70px;
+    }
+
+    #dcfnalogo{
+      position: absolute;
+      top: -70px;
+      left: 50%;
+      right: 50%;
+      margin-left: -60px;
+      width: 70px;
+      height: 70px;
+    }
+
+    #mhegLogo {
+      position: absolute;
+      top: -55px;
+      left: 50%;
+      right: 50%;
+      margin-left: -60px;
+      width: 110px;
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    .orgBackground {
+        background-size: 1680px;
+    }
+}
+
+.html5-video-player {
+    background-color: #FFF;
+}
+
+.highlight {
+    border: 1px solid red;
+}
+
+#absCaption {
+    position: absolute;
+}
+
+.red {
+    color: red;
+}

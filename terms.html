@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>BlueQ</title>
+	<!-- core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <script src="js/modernizr-2.8.3-respond-1.4.2.min.js" async></script>
+    <script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-66296584-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<style>
+		ol.roman {
+			list-style: none;
+		}
+		ol.roman {
+			counter-reset: roman;
+		}
+		ol.roman > li.roman:before {
+			counter-increment: roman;
+			content: counter(roman, upper-latin)".";
+			padding-right:5px;
+		}
+		ol.roman li.roman ol.roman {
+			counter-reset: inner;
+		}
+		ol.roman ol.roman li.roman:before {
+			counter-increment: inner;
+			content: counter(roman, upper-latin)"."counters(inner,'.');
+			padding-right:5px;
+		}
+
+		ol.decimal {
+			list-style-type: none;
+			counter-reset: item;
+			margin: 0;
+			padding: 0;
+		}
+
+		ol.decimal > li.decimal {
+			display: table;
+			counter-increment: item;
+			margin-bottom: 0.6em;
+		}
+
+		ol.decimal > li.decimal:before {
+			content: counters(item, ".") ". ";
+			display: table-cell;
+			padding-right: 0.6em;
+		}
+
+		li.decimal ol.decimal > li.decimal {
+			margin: 0;
+		}
+
+		li.decimal ol.decimal > li.decimal:before {
+			content: counters(item, ".") " ";
+		}
+	</style>
+</head><!--/head-->
+
+<body id="home" class="homepage">
+    <header id="header">
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/blogo1.png" alt="logo" class="png-alternative">
+                        <img src="images/blogo.svg" alt="logo" class="svg-alternative">
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right">
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+
+    <section id="privacy">
+        <div class="container">
+                <h2>Terms of Service</h2>
+                        <div class="media-body">
+							<h4>INTRODUCTION</h4>
+							<p>1.1 Clasity Pty Ltd ACN 168 177 259 provides the BlueQ web & mobile application (<b>BlueQ</b>).</p>
+							<p>1.2 BlueQ is a qualification recordkeeping and management solution for use by organisations and their members, as more fully described in items C.1 of these Terms of Service.</p>
+							<h4>IMPORTANT TERMS</h4>
+							<ol class="roman">
+								<li class="roman">Key Definitions
+									<ol class="roman">
+										<li class="roman">The following terms are used regularly throughout these Terms of Service and have a particular meaning (additional definitions are found in the General Conditions):
+											<ol type="a">
+												<li><b>Account</b> means a registered User account within BlueQ.</li>
+												<li><b>Agreement</b> means these Terms of Service.</li>
+												<li><b>Company</b> means Clasity Pty Ltd ACN 168 177 259.</li>
+												<li><b>BlueQ</b> means the web application accessible from /.</li>
+												<li><b>Fee</b> means any fee payable by a User for access to, or use of BlueQ.</li>
+												<li><b>Individual</b> means a person with Information about them in BlueQ.</li>
+												<li><b>Information</b> means any information about an Individual available via BlueQ including Personal Information and any information in relation to a Qualification.</li>
+												<li><b>Master Account</b> means an account held by an Organisation that enables that Organisation to manage and/or authorise access to multiple Organisations.</li>
+												<li><b>Member</b> means an Individual that holds a Member Account (referred to on the Website and within BlueQ as a Personal Account).</li>
+												<li><b>Organisation</b> means (without limitation) a person, organisation, business or entity that:
+													<ol type="i">
+														<li>Holds an Organisation Account; and</li>
+														<li>Is authorised to access an Individual’s Information.</li>
+													</ol>
+												</li>
+												<li><b>Personal Information</b> has the same meaning as in the Privacy Act 1988 (Cth).</li>
+												<li><b>Privacy Policy</b> means BlueQ’s privacy policy as updated from time-to-time, which can be found at /privacy.html</li>
+												<li><b>Qualification</b> means any qualification, certificate, record of compliance, training or achievement issued by an educational institution or a regulatory body.</li>
+												<li><b>Third Party</b> means any person that is not a User.</li>
+												<li><b>User</b> means an Organisation or Member that uses BlueQ.</li>
+												<li><b>Website</b> means the Company’s website at /</li>
+											</ol>
+										</li>
+									</ol>
+								</li>
+								<li class="roman">Agreement
+									<ol class="roman">
+										<li class="roman">This Agreement governs the use of BlueQ by any User and limits the liability of the Company to any User. This Agreement has specific terms of use (in addition to the General Conditions) that apply to:
+											<ol type="a">
+												<li>Organisations (<b>Item C</b>)</li>
+												<li>Members and Individuals (<b>Item D</b>)</li>
+											</ol>
+										</li>
+										<li class="roman">In addition to any other express or implied consents, by using BlueQ the User accepts and agrees to the terms of:
+											<ol type="a">
+												<li>This Agreement; and</li>
+												<li>The Privacy Policy.</li>
+											</ol>
+										</li>
+									</ol>
+								</li>
+								<li class="roman">Organsation Terms of Use
+									<ol class="roman">
+										<li class="roman">The Organisation agrees and warrants that:
+											<ol type="a">
+												<li>The Organisation has obtained all authorisations necessary prior to uploading or inputting Information into BlueQ, especially in regard to an Individual;</li>
+												<li>The Organisation is solely responsible for ensuring that its use of BlueQ and storage of Information in BlueQ is compliant with all relevant laws and/or any agreement with each Individual; and</li>
+												<li>The Organisation must ensure that its own privacy policy and other statements about how it handles Information are accurate in respect of the Organisation’s use of BlueQ.</li>
+											</ol>
+										</li>
+										<li class="roman">BlueQ may enable an Organisation to:
+											<ol type="a">
+												<li>Create and manage an Organisation Account;</li>
+												<li>Create and manage Member records;</li>
+												<li>Create and manage records of Qualifications including such details as (but not limited to):
+													<ol type="i">
+														<li>Names and Information of Individuals;</li>
+														<li>Qualifications held by an Individual;</li>
+														<li>Dates of issue of Qualifications;</li>
+														<li>Expiry and renewal dates of Qualifications;</li>
+														<li>Any other information BlueQ may allow the management of qualifications from time-to-time;</li>
+													</ol>
+												</li>
+												<li>Upload digital copies of Qualification documents;</li>
+												<li>Generate on demand, or automatically receive archive files detailing the Information accessible by the Organisation in BlueQ;</li>
+												<li>Authorise the creation of a Member Account;</li>
+												<li>Identify whether a Qualification has been verified by BlueQ.</li>
+											</ol>
+										</li>
+										<li class="roman">The Organisation agrees and warrants that:
+											<ol type="a">
+												<li>It uses BlueQ at its own risk;</li>
+												<li>To the extent permitted by law, the Company shall not be liable to the Organisation under any circumstance during a free-trial period, or such other period that the Organisation does not pay a Fee to use BlueQ;</li>
+												<li>It is responsible for paying the Company the Fees for its use of BlueQ, including any Fee for a Member’s access authorised by the Organisation. The Fees (if any) shall be as agreed with the Company;</li>
+												<li>To the extent permitted by law the Organisation indemnifies and will hold the Company harmless against all costs, claims damages and expenses for any:
+													<ol type="i">
+														<li>Penalty imposed upon the Organisation;</li>
+														<li>Claim of infringement of intellectual property rights made by an Individual or Third Party;</li>
+														<li>Claim of breach of confidentiality by an Individual or Third Party;</li>
+													</ol>
+												</li>
+											As a result of the Organisation’s use of BlueQ;
+												<li>It shall not store or record any Information that it can access through BlueQ unless it is fully compliant with the Privacy Act;</li>
+												<li>It shall ensure that all information that it makes available through BlueQ is accurate and up to date, including (but not limited to) information supplied for:
+													<ol type="a">
+														<li>Creating an Account;</li>
+														<li>Creating records;</li>
+														<li>Updating records;</li>
+														<li>Notifying Users; and</li>
+														<li>Any other information that may be accessed by the Organisation or another User.</li>
+													</ol>
+												</li>
+												<li>It shall not disclose any Information about an Individual to any other person or party other than as authorised by the Individual;</li>
+												<li>It shall ensure that any Information it updates about an Individual is true and accurate and agrees to update that Information to ensure that it is current;</li>
+												<li>It shall ensure all Information it has access to through its use of BlueQ is kept and used in accordance with applicable privacy laws in the jurisdiction;</li>
+												<li>It shall only use BlueQ for its intended purpose as set out in this Agreement;</li>
+												<li>It shall comply with all anti-spam legislation in its jurisdiction;</li>
+												<li>The archive feature that generates a report of some Information accessible via an Organisation’s Account at a given point in time cannot be completely disabled by a user, but an Organisation may set preferences to receive an archive at the lowest frequency allowed by BlueQ;</li>
+												<li>Its licence to use BlueQ, as provided for in the General Conditions, is subject to the payment of all necessary Fees;</li>
+												<li>It grants the Company a non-exclusive, royalty free and perpetual licence to display the Organisation’s name and/or logo on its website, and in other promotional material for the purposes of promoting BlueQ. The Organisation may revoke this licence at any time by notifying the Company in writing.</li>
+											</ol>
+										</li>
+										<li class="roman">Any person who registers as an Organisation in BlueQ warrants that he or she is an authorised representative of that Organisation with the requisite authority to bind the Organisation to this Agreement.</li>
+										<li class="roman">Where an Organisation has its access to BlueQ granted or authorised via a Master Account, or agrees to have its Organisation Account linked to a Master Account, it agrees that any data in its account shall be viewable by the Master Account holder.</li>
+									</ol>
+								</li>
+								<li class="roman">Member and Individual Terms of Use
+									<ol class="roman">
+										<li class="roman">An Individual’s access to BlueQ may be created, limited and cancelled by the Organisation authorising the creation of a Member Account for an Individual at the Organisation’s discretion. Such access may include such features as described in item C.2 as the Organisation enables for the Member.</li>
+										<li class="roman">The Individual agrees and accepts that:
+											<ol type="a">
+												<li>The Individual uses BlueQ at its own risk;</li>
+												<li>Under no circumstances will the Company be responsible to an Individual that is a member of an Organisation for that Organisation’s use of the Individual’s Information;</li>
+												<li>Any claim based on an Individual’s use of BlueQ must be directed to the Organisation;</li>
+												<li>The Individual indemnifies the Company against all costs, claims damages and expenses for any injury or damage caused to the person or property of a Third Party as a result of the Individual’s use of BlueQ;</li>
+												<li>The Company may share the Information input or uploaded by the Individual with the Individual’s Organisation;</li>
+												<li>Any information shared by the Company with an Organisation may be retained by the Organisation for the purpose of updating their administrative records and/or compliance purposes, or such other purpose as may be agreed between the Individual and the Organisation;</li>
+												<li>BlueQ may send the Individual emails, text messages, push notifications and other alerts on behalf of Organisations;</li>
+												<li>Any consent or statement made by an Individual through BlueQ is valid and binding unless and until revoked by the Individual, and an Organisation may rely on a consent or statement made through BlueQ without any need to further verify the veracity of that consent;</li>
+												<li>All information about an Individual is used and controlled by the Individual or Organisation, not the Company;</li>
+												<li>All information input into BlueQ about an Individual is provided with that Individual’s consent;</li>
+												<li>The Individual must ensure that all their Personal Information on BlueQ is true and accurate, and agrees to update that information in order to ensure that it is current;</li>
+												<li>The Organisation authorised by the Individual to receive the Information and other Personal Information may have its own policy governing access to this information and the use of BlueQ.</li>
+											</ol>
+										</li>
+										<li class="roman">Where an Individual has its access to BlueQ granted or authorised via a Master Account, or has their Member Account linked to a Master Account, the Member agrees that any data in its account shall be viewable by the Master Account holder.</li>
+									</ol>
+								</li>
+								<li class="roman">Master Account Terms of Use
+									<ol class="roman">
+										<li class="roman">Each Master Account holder agrees to the terms of the Organisation Terms of Use in item C, and shall have the added functionality of being able to authorise, view and manage Organisations and Individuals within those Organisations via BlueQ.</li>
+									</ol>
+								</li>
+								<li class="roman">General User Terms
+									<ol class="roman">
+										<li class="roman">Where a User shares any of its data via BlueQ (namely qualifications), the User agrees and acknowledges that the User is solely responsible for:
+											<ol type="a">
+												<li>Whom it sends any links granting access to the data;</li>
+												<li>The use of data by anyone with access to the data;</li>
+												<li>The use of any security settings of any links provided by BlueQ (such as expiry); and/or</li>
+												<li>The cancellation of any links previously shared.</li>
+											</ol>
+										</li>
+										<li class="roman">To the extent permitted by law, the Company accepts no liability for the accuracy of any information made available using BlueQ. Any reliance on the information available through BlueQ is at the User’s own risk. A User’s recourse for reliance on inaccurate, fraudulent or otherwise false information shall only be against the User that supplied that information, and not against the Company.</li>
+										<li class="roman">Any dispute that may arise between Users must be dealt with strictly between those Users and not involve the Company in any way. Under no circumstance will the Company perform a dispute resolution role for a dispute between Users.</li>
+										<li class="roman">BlueQ does not keep a back-up of records or Qualification documents that have been deleted by a User. If a User deletes such a record or Qualification document, no User shall have a claim against the Company.</li>
+										<li class="roman">BlueQ may be hosted on servers located outside Australia and may also use email servers located outside of Australia. Such services may host or transmit an Individual’s Information.</li>
+									</ol>
+								</li>
+								<li class="roman">Fees
+									<ol class="roman">
+										<li class="roman">Fees apply to the use of BlueQ as agreed with the Company. The terms of those Fees are set out in the General Conditions.</li>
+										<li class="roman">Where a Fee is paid for a particular term of access to BlueQ, the User shall not be entitled to a pro-rata refund of any Fees if it elects to stop using BlueQ within that term.</li>
+									</ol>
+								</li>
+								<li class="roman">Electronic Transactions
+									<ol class="roman">
+										<li class="roman">The User agrees that when it provides any consent, authority or agreement through BlueQ it does so as an electronic transaction and warrants that such transaction shall be binding on the party.</li>
+										<li class="roman">The User agrees that any request for a consent, authority or agreement it sends to other Users through BlueQ as an electronic transaction may be sent directly from its email address.</li>
+									</ol>
+								</li>
+								<li class="roman">Verification
+									<ol class="roman">
+										<li class="roman">The User is solely responsible for verifying the identity of a signatory to any electronic transaction it is a party to.</li>
+										<li class="roman">The Company does not guarantee the validity of any electronic transaction.</li>
+									</ol>
+								</li>
+								<li class="roman">Term & Limitations
+									<ol class="roman">
+										<li class="roman">Term.
+											<ol type="a">
+												The User’s licence to access BlueQ shall be for a term as agreed with the Company unless;
+												<li>Terminated earlier in accordance with this Agreement; or</li>
+												<li>The Company grants an extension of the licence (which extension will be at the Company’s absolute discretion, and on such conditions as the Company determines).</li>
+											</ol>
+										</li>
+										<li class="roman">Limitations on Use.
+											<ol type="a">
+												The Company may limit or restrict access to BlueQ from time-to-time as it sees fit, including (but not limited to):
+												<li><b>Entities.</b> The Company may restrict access only to reputable and/or registered organisations; and</li>
+												<li><b>Location.</b> The Company may restrict access to BlueQ to certain jurisdictions where it is able to offer BlueQ.</li>
+											</ol>
+										</li>
+									</ol>
+								</li>
+								<li class="roman">Registration
+									<ol class="roman">
+										<li class="roman">Registration.
+											<ol type="a">
+												<li>The User must register an account in BlueQ to use BlueQ;</li>
+												<li>The Company may set any registration requirements in its absolute discretion.</li>
+											</ol>
+										</li>
+									</ol>
+								</li>
+								<li class="roman">Confidential Information
+									<ol class="roman">
+										<li class="roman">The Company will keep confidential all information that it becomes aware of regarding the User’s:
+											<ol type="a">
+												<li>Information;</li>
+												<li>Personal information;</li>
+												<li>Business, employees and contractors.</li>
+											</ol>
+										</li>
+									</ol>
+								</li>
+								<li class="roman">Termination
+									<ol class="roman">
+										<li class="roman">This Agreement may be terminated at any time by:
+											<ol type="a">
+												<li>Written notice of one party to the other; or</li>
+												<li>By cancelling or otherwise terminating your account through BlueQ.</li>
+											</ol>
+										</li>
+									</ol>
+								</li>
+								<li class="roman">Disclaimer - Third Party Information & Services
+									<ol class="roman">
+										<li class="roman">The User acknowledges that BlueQ:
+											<ol type="a">
+												<li>Is dependent on third-party services, including but not limited to:
+													<ol type="i">
+														<li>Banks, credit card providers, BPAY;</li>
+														<li>Telecommunications services;</li>
+														<li>Hosting services;</li>
+														<li>Email services;</li>
+														<li>Analytics services; and</li>
+														<li>Databases belonging to third parties.</li>
+													</ol>
+												</li>
+												<li>May provide links to third party websites containing (without limitation) Information.</li>
+											</ol>
+										</li>
+										<li class="roman">The User agrees that the Company shall not be responsible or liable in any way for:
+											<ol type="a">
+												<li>Interruptions to the availability of BlueQ due to third-party services; or</li>
+												<li>Information contained on any linked third party website.</li>
+											</ol>
+										</li>
+									</ol>
+								</li>
+								<li class="roman">General
+									<ol class="roman">
+										<li class="roman">Governing Law. Victoria, Australia</li>
+										<li class="roman">Reference City. Melbourne.</li>
+									</ol>
+								</li>
+							</ol>
+							<h4>GENERAL CONDITIONS</h4>
+							<ol class="decimal">
+								<li class="decimal">Background
+									<ol class="decimal">
+										<li class="decimal">The User wishes to access BlueQ provided by The Company.</li>
+										<li class="decimal">The terms and conditions in this Agreement govern the provision of BlueQ to the User by the Company.</li>
+									</ol>
+								</li>
+								<li class="decimal">Interpretation
+									<ol class="decimal">
+										<li class="decimal">The following definitions apply in this document:
+											<ol type="a">
+												<li><b>ABN</b> means Australian Business Number.</li>
+												<li><b>ACN</b> means Australian Company Number.</li>
+												<li><b>Business Day means a day</b> (other than a Saturday, Sunday or public holiday) on which banks are open for general banking business in the Reference City set out in item O of the Important Terms.</li>
+												<li><b>Confidential Information</b> means all information (whether or not it is described as confidential) in any form or medium concerning any past, present or future business, operations or affairs of either party, including, without limitation:
+													<ol type="i">
+														<li>All technical or non-technical data, formulae, patterns, programs, devices, methods, techniques, plans, drawings, models and processes, source and object code, software and computer records;</li>
+														<li>All business and marketing plans and projections, details of agreements and arrangements with third parties, and customer and supplier information and lists;</li>
+														<li>All financial information, pricing schedules and structures, product margins, remuneration details and investment outlays;</li>
+														<li>All information concerning any employee, customer, contractor, supplier or agent of the relevant party;</li>
+														<li>The party's policies and procedures; and </li>
+														<li>All information contained in this document,</li>
+														But excludes information that the other party can establish:
+														<li>Is known by or is in the other party's possession or control other than through a breach of this document and is not subject to any obligation of confidence; or</li>
+														<li>Is in the public domain other than by a breach of this document or any obligations of confidence.</li>
+													</ol>
+												</li>
+												<li><b>Corporations Act</b> means the Corporations Act 2001 (Cth).</li>
+												<li><b>Fees</b> mean the fees and charges as set out in the Important Terms.</li>
+												<li><b>Force Majeure</b> means an event or cause beyond the reasonable control of the party claiming force majeure.  It includes each of the following, to the extent it is beyond the reasonable control of that party:
+													<ol type="i">
+														<li>Act of God, lightning, storm, flood, fire, earthquake or explosion, cyclone, tidal wave, landslide, adverse weather conditions;</li>
+														<li>Act of public enemy, war (declared or undeclared), terrorism, sabotage, blockade, revolution, riot, insurrection, civil commotion, epidemic;</li>
+														<li>The effect of any change in applicable laws, orders, rules or regulations of any government or other competent authority; and</li>
+														<li>Embargo, inability to obtain necessary materials, equipment or facilities, or power or water shortage.</li>
+													</ol>
+												</li>
+												<li><b>General Conditions</b> means the terms and conditions set out in the section of this Agreement entitled “General Conditions”.</li>
+												<li><b>GST</b> has the meaning given by the A New Tax System (Goods and Services Tax) Act 1999 (Cth).</li>
+												<li><b>Intellectual Property</b> means all copyright, patents, inventions, trade secrets, know-how, product formulations, designs, circuit layouts, databases, registered or unregistered trademarks, brand names, business names, domain names and other forms of intellectual property.</li>
+												<li><b>Intellectual Property</b> Rights means, for the duration of the rights in any part of the world, any Moral Rights, industrial or intellectual property rights, whether registrable or not, including in respect of Intellectual Property, applications for the registration of any Intellectual Property and any improvements, enhancements or modifications to any Intellectual Property registrations.</li>
+												<li><b>Information</b> has the meaning given to it in the Privacy Act.</li>
+												<li><b>Moral Rights</b> means:
+													<ol type="i">
+														<li>Moral rights pursuant to the Copyright Act 1968 (Cth);</li>
+														<li>Or any rights analogous to the rights set out in Article 6bis of the Berne Convention for Protection of Literary and Artistic Works 1886 (as amended from time to time).</li>
+													</ol>
+												</li>
+												<li><b>Pricing</b> means the pricing as notified to the User in writing by the Company from time-to-time.</li>
+												<li><b>Privacy Act</b> means the Privacy Act 1989 (Cth).</li>
+												<li><b>Solution</b> means the solution called BlueQ described in the Important Terms.</li>
+												<li><b>Special Conditions</b> means the terms and conditions set out in the section of this agreement entitled “Special Conditions”.</li>
+												<li><b>Tax Invoice</b> has the meaning given by the A New Tax System (Goods and Services Tax) Act 1999 (Cth).</li>
+												<li><b>User Content</b> means information, documents, images or other data that is uploaded or input into BlueQ by the User or that forms part of the User’s Intellectual Property.</li>
+											</ol>
+										</li>
+										<li class="decimal">Headings are only for convenience and do not affect interpretation. The following rules apply unless the context requires otherwise:
+											<ol type="a">
+												<li>The singular includes the plural and the opposite also applies.</li>
+												<li>If a word or phrase is defined, any other grammatical form of that word or phrase has a corresponding meaning.</li>
+												<li>A reference to a clause refers to clauses in this Agreement.</li>
+												<li>A reference to legislation is to that legislation as amended, re-enacted or replaced, and includes any subordinate legislation issued under it.</li>
+												<li>Mentioning anything after includes, including, or similar expressions, does not limit anything else that might be included.</li>
+												<li>A reference to a party to this Agreement or another agreement or document includes that party’s successors and permitted substitutes and assigns (and, where applicable, the party’s legal personal representatives).</li>
+												<li>A reference to a person, corporation, trust, partnership, unincorporated body or other entity includes any of them.</li>
+												<li>A reference to information is to information of any kind in any form or medium, whether formal or informal, written or unwritten, for example, computer software or programs, concepts, data, drawings, ideas, knowledge, procedures, source codes or object codes, technology or trade secrets.</li>
+											</ol>
+										</li>
+									</ol>
+								</li>
+								<li class="decimal">Application of this Agreement
+									<ol class="decimal">
+										<li class="decimal">This Agreement applies to use of and access to BlueQ.</li>
+										<li class="decimal">Where the User does not accept the terms and conditions of this Agreement, the User must immediately cease using BlueQ.</li>
+										<li class="decimal">This Agreement may be updated by the Company at its absolute discretion from time-to-time, and unless stated otherwise by the Company in writing, such updates shall come into effect for use of BlueQ at the User’s next login after the User receives written notice of the update(s).</li>
+									</ol>
+								</li>
+								<li class="decimal">The BlueQ Product
+									<ol class="decimal">
+										<li class="decimal">BlueQ is the product described in the Important Terms.</li>
+										<li class="decimal">BlueQ is only accessible to the User for the term set out in the Important Terms.</li>
+										<li class="decimal">The User agrees and accepts that BlueQ is:
+											<ol type="a">
+												<li>Hosted by the Company and shall only be installed, accessed and maintained by the Company, accessed using the internet or other connection to the Company servers and is not available ‘locally’ from the User’s systems; and</li>
+												<li>Managed and supported exclusively by the Company from the Company servers and that no ‘back-end’ access to BlueQ is available to the User unless expressly agreed in writing.</li>
+											</ol>
+										</li>
+										<li class="decimal">As a hosted and managed service, the Company reserves the right to upgrade, maintain, tune, backup, amend, add or remove features and, redesign, improve or otherwise alter BlueQ.</li>
+										<li class="decimal">The Company shall not exercise its rights under clause 4.4 in a manner that would intentionally cause the User to lose access to User Content or fundamentally decrease the utility of BlueQ to the User, other than in accordance with the terms of this Agreement.</li>
+									</ol>
+								</li>
+								<li class="decimal">License
+									<ol class="decimal">
+										<li class="decimal">By accepting the terms and conditions of this Agreement, the User is granted a limited, non-exclusive and revocable license to access and use BlueQ for the duration of this Agreement, in accordance with the terms and conditions of this Agreement.</li>
+										<li class="decimal">The Company may issue the license to the User on the further terms or limitations (including the number of users or volume of use or transactions) as it sees fit.</li>
+										<li class="decimal">The Company may revoke or suspend the User’s license(s) in its absolute discretion for any reason that it sees fit, including for breach of the terms and conditions in this Agreement by the User or any of its users.  The Company will ordinarily advise the User of any suspension or revocation however it is under no obligation to do so.</li>
+									</ol>
+								</li>
+								<li class="decimal">Use
+									<ol class="decimal">
+										<li class="decimal">The User agrees that it shall only use BlueQ for legal purposes and shall not use it to engage any conduct that is unlawful, immoral, threatening, abusive or in a way that is deemed unreasonable by the Company in its discretion.</li>
+									</ol>
+								</li>
+								<li class="decimal">Authorised Users
+									<ol class="decimal">
+										<li class="decimal">The User shall authorise users to access BlueQ in its absolute discretion. The Company accepts no liability for access to User Content by users authorised by the User or using login details of users authorised by the User.</li>
+										<li class="decimal">The User is solely responsible for the security of its username and password for access to BlueQ.</li>
+										<li class="decimal">The User shall notify the Company as soon as it becomes aware of any unauthorised access of its BlueQ account.</li>
+									</ol>
+								</li>
+								<li class="decimal">User Content
+									<ol class="decimal">
+										<li class="decimal">The Company obtains no right, title or interest in User Content including any Intellectual Property found within it. The Company accepts no liability for the content of User Content.</li>
+										<li class="decimal">The User is responsible for the accuracy, quality and legality of User Content and the User’s acquisition of it, and the users that create, access and/or use User Content.</li>
+										<li class="decimal">Despite clause 8.1 the Company shall be authorised to permanently delete User Content where outstanding Fees remain unpaid in accordance with clauses 10 and 11.</li>
+										<li class="decimal">The Company shall not access, use, modify or otherwise deal with User Content except where required by compulsion of law or upon the User’s authority (such as to provide support for BlueQ).</li>
+									</ol>
+								</li>
+								<li class="decimal">Privacy
+									<ol class="decimal">
+										<li class="decimal">The Company maintains the Privacy Policy in compliance with the provisions of the Privacy Act for data that it collects about the User and other customers.</li>
+										<li class="decimal">The Privacy Policy does not apply to how an Organisation handles Personal Information.  It is the Organisation’s responsibility to meet the obligations of the Privacy Act by implementing a privacy policy in accordance with law.</li>
+										<li class="decimal">The Company makes no warranty as to the suitability of BlueQ in regards to the Organisation’s privacy obligations at law or contract, and it is the Organisation’s responsibility to determine whether BlueQ is appropriate for the Organisation’s circumstances.</li>
+										<li class="decimal">The BlueQ website may use cookies (a small tracking code in your browser) to improve a User’s experience while browsing, while also sending browsing information back to the Company. The User may manage how it handles cookies in its own browser settings.</li>
+									</ol>
+								</li>
+								<li class="decimal">Fees
+									<ol class="decimal">
+										<li class="decimal">The User agrees to pay all Fees as and when they fall due and to the extent permissible by law. Fees are non-cancellable and/or non-refundable once ordered or paid.</li>
+										<li class="decimal">The Company may introduce new services with corresponding Fees by giving the User written notice of their availability and applicability.</li>
+										<li class="decimal">The Company shall maintain all Fees for the term of the licence paid for by the Organisation.</li>
+										<li class="decimal">The Company shall notify the User of any changes to existing Fees no less than 14 days before the end of the term of the Organisation’s licence.</li>
+										<li class="decimal">The Company may revoke or suspend the User’s license to access BlueQ for unpaid Fees without liability.</li>
+										<li class="decimal">Where the Company:
+											<ol type="a">
+												<li>Is required to perform any services for the User outside of what is set out in this Agreement or otherwise in writing; and</li>
+												<li>Is subject to delays caused by changes or complexities outside of its control (and not caused by its breach of this Agreement); then</li>
+												The User agrees that the Company shall be entitled to charge the User an additional amount that is reasonable for the service performed.
+											</ol>
+										</li>
+										<li class="decimal">All transactions are processed in Australian dollars and conversion rates may apply for foreign currencies.</li>
+										<li class="decimal">GST is applicable to any Fees charged by the Company to Users within Australia. Unless expressed otherwise, all Fees shall be deemed exclusive of GST. The Company will provide the User with a Tax Invoice for its payment.</li>
+										<li class="decimal">No refunds of Fees are offered other than as specified in this Agreement or as required by law.</li>
+									</ol>
+								</li>
+								<li class="decimal">Invoicing & Payments
+									<ol class="decimal">
+										<li class="decimal">The Company shall issue the User a Tax Invoice for all Fees for which GST applies.</li>
+										<li class="decimal">The terms of payment set out in the Fees shall apply.</li>
+										<li class="decimal">Should the User dispute a Tax Invoice, the User must notify the Company that issued the invoice of the disputed item within 5 Business Days of the date of the Tax Invoice. The User must pay the amount of the Tax Invoice not in dispute within the prescribed payment period.</li>
+										<li class="decimal">Overdue Tax Invoices shall accrue interest at the rate of 1.5% per month, or in default, the maximum rate of penalty interest prescribed under law.</li>
+										<li class="decimal">The User authorises the Company to use the User’s information for the purposes of obtaining a credit assessment or to otherwise make investigations as to the User’s payment history.</li>
+									</ol>
+								</li>
+								<li class="decimal">Data
+									<ol class="decimal">
+										<li class="decimal"><b>Security.</b> The Company takes the security of BlueQ and the privacy of its users very seriously.  The User agrees that the User shall not do anything to prejudice the security or privacy of the Company’s systems or the information on them.</li>
+										<li class="decimal"><b>Transmission.</b> The Company shall do all things reasonable to ensure that the transmission of data occurs according to accepted industry standards.  It is up to the User to ensure that any transmission standards meet the User’s operating and legal requirements.</li>
+										<li class="decimal"><b>Storage.</b> The Company may limit the amount of data that the User stores in BlueQ, and shall advise the User of such.  Data that is stored with BlueQ shall be stored according to accepted industry standards.</li>
+										<li class="decimal"><b>Backup.</b> The Company shall perform backups of BlueQ in a reasonable manner at such times and intervals as are reasonable for its business purposes.  The Company does not warrant that it is able to backup or recover specific User Content from any period of time unless so stated in writing by the Company.</li>
+									</ol>
+								</li>
+								<li class="decimal">Access
+									<ol class="decimal">
+										<li class="decimal">By accepting the terms of this Agreement the User agrees that the Company shall provide access to BlueQ to the best of its abilities, however:
+											<ol type="a">
+												<li>Access to BlueQ may be prevented by issues outside of its control; and</li>
+												<li>It accepts no responsibility for ongoing access to BlueQ.</li>
+											</ol>
+										</li>
+										<li class="decimal">Users may prepare for unscheduled unavailability of BlueQ by printing and storing hard copies of Information stored in BlueQ.</li>
+									</ol>
+								</li>
+								<li class="decimal">Intellectual Property
+									<ol class="decimal">
+										<li class="decimal"><b>Trademarks.</b> The Company has moral & registered rights in its trade marks and the User shall not copy, alter, use or otherwise deal in the marks without the prior written consent of the Company.</li>
+										<li class="decimal"><b>Proprietary Information.</b> The Company may use software and other proprietary systems and Intellectual Property for which the Company has appropriate authority to use, and the User agrees that such is protected by copyright, trademarks, patents, proprietary rights and other laws, both domestically and internationally. The User warrants that it shall not infringe on any third-party rights through the use of BlueQ.</li>
+										<li class="decimal"><b>The BlueQ Application.</b> The User agrees and accepts that BlueQ is the Intellectual Property of the Company and the User further warrants that by using BlueQ the User will not:
+											<ol type="a">
+												<li>Copy BlueQ or the services that it provides for the User’s own commercial purposes; and</li>
+												<li>Directly or indirectly copy, recreate, decompile, reverse engineer or otherwise obtain, modify or use any source or object code, architecture, algorithms contained in BlueQ or any documentation associated with it.</li>
+											</ol>
+										</li>
+										<li class="decimal"><b>Content.</b> All content (with the exception of User Content) remains the Intellectual Property of the Company, including (without limitation) any source code, analytics, insights, ideas, enhancements, feature requests, suggestions or other information provided by the User or any other party with respect to BlueQ.</li>
+									</ol>
+								</li>
+								<li class="decimal">Confidentiality
+									<ol class="decimal">
+										<li class="decimal">The information and classes of information set out in the Important Terms are Confidential Information for the purposes of this Agreement. In default, information relating to the business operations, Personal Information and other information that should be confidential is Confidential Information.
+										<li class="decimal">Each party acknowledges and agrees that:
+											<ol type="a">
+												<li>The Confidential Information is secret, confidential and valuable to the disclosing party (Discloser);</li>
+												<li>It owes an obligation of confidence to the Discloser concerning the Confidential Information;</li>
+												<li>It must not disclose the Confidential Information to a third party except as permitted in this Agreement;</li>
+												<li>All Intellectual Property rights remain vested in the Discloser but disclosure of Confidential Information does not in any way transfer or assign any rights or interests in the Intellectual Property to the receiving party; and</li>
+												<li>Any breach or threatened breach by the receiving party of an obligation under this Agreement may cause the Discloser immediate and irreparable harm for which damages alone may not be an adequate remedy. Consequently the Discloser has the right, in addition to other remedies available at law or in equity, to seek injunctive relief against the receiving party (and its agents, assigns, employees, officers and directors, personally) or to compel specific performance of this clause.</li>
+											</ol>
+										</li>
+										<li class="decimal">A party must notify the Discloser in writing, giving full details known to it immediately, when it becomes aware of:
+											<ol type="a">
+												<li>Any actual, suspected, likely or threatened breach by it of clause 15.1;</li>
+												<li>Any actual, suspected, likely or threatened breach by any person of any obligation in relation to the Confidential Information; or</li>
+												<li>Any actual, suspected, likely or threatened theft, loss, damage, or unauthorised access, use or disclosure of or to any Confidential Information.</li>
+											</ol>
+										</li>
+										<li class="decimal">The receiving party must promptly take all steps that the Discloser may reasonably require and must co-operate with any investigation, litigation or other action of the Discloser or of a related body corporate if there is:
+											<ol type="a">
+												<li>Any actual, suspected, likely or threatened breach of a term of this Agreement; or</li>
+												<li>Any theft, loss, damage or unauthorised access, use or disclosure of or to any Confidential Information that is or was in its possession or control.</li>
+											</ol>
+										</li>
+									</ol>
+								</li>
+								<li class="decimal">Liability & Indemnity
+									<ol class="decimal">
+										<li class="decimal">The User agrees that it uses BlueQ at its own risk.</li>
+										<li class="decimal">The User acknowledges that the Company holds no liability with respect to any information accessible via BlueQ.</li>
+										<li class="decimal">The User agrees that it has had reasonable opportunity to obtain legal advice on this Agreement.</li>
+										<li class="decimal">The User acknowledges that the Company is not responsible for the conduct or activities of any User and that the Company is not liable for such under any circumstances.</li>
+										<li class="decimal">The User agrees to indemnify the Company for any loss, damage, cost or expense that the Company may suffer or incur as a result of or in connection with the User’s use of or conduct in connection with BlueQ, including any breach by the User of these Terms.</li>
+										<li class="decimal">In no circumstances will the Company be liable for any direct, incidental, consequential or indirect damages, loss or corruption of data, loss of profits, goodwill, bargain or opportunity, loss of anticipated savings or any other similar or analogous loss resulting from the User’s access to, or use of, or inability to use BlueQ or any content, whether based on warranty, contract, tort, negligence, in equity or any other legal theory, and whether or not the Company knew or should have known of the possibility of such damage, to business interruption of any type, whether in tort, contract or otherwise.</li>
+										<li class="decimal">Certain rights and remedies may be available under the Competition and Consumer Act 2010 (Cth) or similar legislation of other States or Territories and may not be permitted to be excluded, restricted or modified. Apart from those that cannot be excluded, the Company and the Company’s related entities exclude all conditions and warranties that may be implied by law. To the extent permitted by law, the Company’s liability for breach of any implied warranty or condition that cannot be excluded is restricted, at the Company’s option to:
+											<ol type="a">
+												<li>The re-supply of services or payment of the cost of re-supply of services; or</li>
+												<li>The replacement or repair of goods or payment of the cost of replacement or repair.</li>
+											</ol>
+										</li>
+									</ol>
+								</li>
+								<li class="decimal">Breach
+									<ol class="decimal">
+										<li class="decimal">Where a party is in breach of this Agreement, the other party may issue a written notice (Breach Notice) requiring the party in breach that must set out:
+											<ol type="a">
+												<li>The nature of the breach;</li>
+												<li>The provisions of the Agreement that are alleged to have been breached;</li>
+												<li>A reasonable timeframe to remedy the breach in no less than 10 Business Days; and</li>
+												<li>The action required to remedy the breach.</li>
+											</ol>
+										</li>
+										<li class="decimal">Where a party issues a compliant Breach Notice in accordance with clause 17.1, the receiving party shall be required to respond and/or remedy the breach as so set out in the Breach Notice.  Failure to respond in writing setting out:
+											<ol type="a">
+												<li>The steps taken to remedy the breach; or</li>
+												<li>Why the party believes it is not in breach as put forward in the Breach Notice,</li>
+												Shall not in itself confirm the alleged breach but shall be in itself a breach of this Agreement.
+											</ol>
+										</li>
+										<li class="decimal">Failure to remedy a breach set out in a Breach Notice shall be a material breach of this Agreement (Material Breach).</li>
+									</ol>
+								</li>
+								<li class="decimal">Termination
+									<ol class="decimal">
+										<li class="decimal"><b>Breach.</b> Where a party is in Material Breach of this Agreement, the other party may terminate this Agreement by giving written notice of termination, which shall become effective 5 Business Days after the date of the notice.</li>
+										<li class="decimal"><b>Insolvency.</b> Either party may terminate this Agreement immediately by notice, if either party:
+											<ol type="a">
+												<li>Stops or suspends or threatens to stop or suspend payment of all or a class of its debts;</li>
+												<li>Is insolvent within the meaning of section 95A of the Corporations Act;</li>
+												<li>Fails to comply with a statutory demand (within the meaning of section 459F(1) of the Corporations Act) unless:
+													<ol type="i">
+														<li>The debt to which the statutory demand relates is discharged within 15 Business Days of the date of the failure; or</li>
+														<li>The party demonstrates to the satisfaction of the other party (acting reasonably) that it is able to pay all its debts as and when they become due and payable.</li>
+													</ol>
+												</li>
+												<li>Has an administrator appointed in respect of it;</li>
+												<li>Has a controller within the meaning of section 9 of the Corporations Act or similar officer appointed to the whole or a substantial part of its assets or undertaking and that controller or similar officer is not removed within 15 Business Days of the appointment;</li>
+												<li>Has an order made or a resolution passed for its winding up or dissolution or it enters into an arrangement, compromise or composition with or assignment for the benefit of its creditors or a class of them;</li>
+												<li>Has any security enforced over, or a distress, execution or other similar process levied or served against, the whole or a substantial part of its assets or undertaking; or</li>
+												<li>Is subject to any event, which, under the law of any relevant jurisdiction, has an analogous or equivalent effect to any of the events listed above.</li>
+											</ol>
+										</li>
+										<li class="decimal">Expiry or termination of this Agreement is without prejudice to and does not affect the accrued rights or remedies of any of the parties arising in any way out of this Agreement up to the date of expiry or termination.</li>
+										<li class="decimal">The rights and obligations under the relevant provisions of clauses 7, 8, 9, 10, 11, 14, 15, 16, 17, 18, 19, 20, 21 and 21.6 survive termination of this Agreement.</li>
+									</ol>
+								</li>
+								<li class="decimal">Disputes
+									<ol class="decimal">
+										<li class="decimal">All disputes shall be handled in accordance with the Company’s dispute resolution policy.</li>
+										<li class="decimal">Where the Company does not have a relevant dispute resolution policy for a type of dispute, the following process shall apply:
+											<ol type="a">
+												<li><b>Negotiation.</b> If there is a dispute between the parties relating to or arising out of this Agreement, then within 5 Business Days of a party notifying the other party of a dispute, senior representatives from each party must meet (or discuss directly via the telephone or internet) and use all reasonable endeavours acting in good faith to resolve the dispute by joint discussions;</li>
+												<li><b>Mediation.</b> If the dispute between the parties relating to or arising out of this Agreement is not resolved within five Business Days of notification of the dispute under Clause 19.1, the parties must agree to submit the dispute to mediation, administered by lawyers engaged in alternative dispute resolution;</li>
+												<li><b>Arbitration.</b> If the dispute between the parties relating to or arising out of this Agreement is not settled by mediation under Clause (b), either party may by written notice to the other refer the dispute to arbitration administered by the Institute of Arbitrators Australia.  The arbitrator will be agreed between the parties from a panel suggested by the President of the Institute of Arbitrators Australia or failing Agreement, an arbitrator will be appointed by the President of the Institute of Arbitrators Australia; and</li>
+												<li><b>Court proceedings.</b> A party may not commence court proceedings in relation to a dispute relating to or arising out of this Agreement until it has exhausted the procedures in this clause 19.2 unless the party seeks appropriate injunctive or other interlocutory relief to preserve property or rights or to avoid losses that are not compensable in damages.</li>
+											</ol>
+										</li>
+									</ol>
+								</li>
+								<li class="decimal">Force Majeure
+									<ol class="decimal">
+										<li class="decimal">If a party is prevented in whole or in part from carrying out its obligations under this Agreement as a result of Force Majeure, it will promptly notify the other party accordingly.  The notice must:
+											<ol type="a">
+												<li>Specify the obligations and the extent to which it cannot perform those obligations;</li>
+												<li>Fully describe the event of Force Majeure;</li>
+												<li>Estimate the time during which the Force Majeure will continue; and</li>
+												<li>Specify the measures proposed to be adopted to remedy or abate the Force Majeure.</li>
+											</ol>
+										</li>
+										<li class="decimal">Following a notice of Force Majeure in accordance with clause 20.1 and while the Force Majeure continues, the obligations which cannot be performed because of the Force Majeure will be suspended, other than obligations to pay money that is due and payable.</li>
+										<li class="decimal">The party that is prevented from carrying out its obligations under this Agreement as a result of Force Majeure must remedy the Force Majeure to the extent reasonably practicable and resume performance of its obligations as soon as reasonably possible.</li>
+										<li class="decimal">The party that is prevented from carrying out its obligations under this Agreement as a result of Force Majeure must take all action reasonably practicable to mitigate any loss suffered by the other party as a result of the party’s failure to carry out its obligations under this Agreement.</li>
+										<li class="decimal">The term of this Agreement will not be extended by the period of Force Majeure.</li>
+									</ol>
+								</li>
+								<li class="decimal">Electronic Communication, Amendment and Assignment
+									<ol class="decimal">
+										<li class="decimal">The words in this clause that are defined in the Electronic Transactions Act 1999 (Cth) have the same meaning.</li>
+										<li class="decimal">The User can direct notices, enquiries, complaints and so forth to the Company as set out in this Agreement.  The Company will notify the User of a change of details from time-to-time.</li>
+										<li class="decimal">The Company will send the User notices and other correspondence to the details that the User submits to the Company, or that the User notifies the Company of from time-to-time. It is the User’s responsibility to update its contact details as they change.</li>
+										<li class="decimal">A consent, notice or communication under this Agreement is effective if it is sent as an electronic communication unless required to be physically delivered under law.</li>
+										<li class="decimal">Notices must be sent to the parties’ most recent known contact details.</li>
+										<li class="decimal">The User may not assign or otherwise create an interest in this Agreement.</li>
+										<li class="decimal">The Company may assign or otherwise create an interest in its rights under this Agreement by giving written notice to the User.</li>
+									</ol>
+								</li>
+								<li class="decimal">General
+									<ol class="decimal">
+										<li class="decimal"><b>Special Conditions.</b> The parties may agree to any Special Conditions to this Agreement in writing.</li>
+										<li class="decimal"><b>Prevalence.</b> To the extent that the Important Terms are inconsistent with the General Conditions, the terms of the Important Terms will prevail. To the extent that the Special Conditions are inconsistent with the Important Terms, the Special Conditions will prevail.</li>
+										<li class="decimal"><b>Disclaimer.</b>  Each party acknowledges that it has not relied on any representation, warranty or statement made by any other party, other than as set out in this Agreement.</li>
+										<li class="decimal"><b>Relationship.</b>  The relationship of the parties to this Agreement does not form a joint venture or partnership.</li>
+										<li class="decimal"><b>Waiver.</b>  No clause of this Agreement will be deemed waived and no breach excused unless such waiver or consent is provided in writing.</li>
+										<li class="decimal"><b>Further Assurances.</b>  Each party must do anything necessary (including executing agreements and documents) to give full effect to this Agreement and the transaction facilitated by it.</li>
+										<li class="decimal"><b>Governing Law.</b>  This Agreement is governed by the laws of the state set out in item O of the Important Terms.  Each of the parties hereby submits to the non-exclusive jurisdiction of courts with jurisdiction there.</li>
+										<li class="decimal"><b>Severability.</b>  Any clause of this Agreement, which is invalid or unenforceable, is ineffective to the extent of the invalidity or unenforceability without affecting the remaining clauses of this Agreement.</li>
+									</ol>
+								</li>
+							</ol>
+							<h4>End General Conditions and Terms of Service</h4>
+                        </div>
+        </div><!--/.container-->
+    </section><!--/#privacy-->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <a href="about.html" target="_blank">About Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="/blog" target="_blank">Blog</a>
+              </div>
+
+              <div class="col-sm-12 text-center">
+                <a href="terms.html" target="_blank">Terms</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="privacy.html" target="_blank">Privacy Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="faq.html" target="_blank">FAQ</a>
+              </div>
+              <div class="col-sm-12 text-center">
+                <a href="https://www.facebook.com/blueq/">Facebook</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="https://www.linkedin.com/company/blueq">LinkedIn</a>
+              </div>
+              <div class="col-sm-12 text-center">
+                <p>1/143 Cecil Street, South Melbourne VIC 3205</p>
+              </div>
+              <div class="col-sm-12 text-center">
+                <p>© 2017 Clasity Pty Ltd</p>
+              </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/mousescroll.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/56ae94a65cc0c7a6483eb59e/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>
